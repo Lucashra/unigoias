@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lista de Produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let produto of produtos">
+      <ion-thumbnail slot="start">
+        <img [src]="produto.imagem" alt="{{produto.titulo}}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ produto.titulo }}</h2>
+        <p>{{ produto.descricao }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
